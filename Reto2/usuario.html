@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Cinema</title>
+        <link rel="icon" type="image/x-icon" href="assets/roller.png" />
+        <!--CSS Boostrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <!--JS Boostrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <!--Fonts Google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <!--AJAX-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script type="text/javascript" src="js/misFunciones.js"></script>
+
+        <style>
+            body {
+                font-family: 'Anton', sans-serif;
+            }
+        </style>
+
+    </head>
+
+
+    <body>
+
+        <!--Navbar-->
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark"  >
+                <div class="container-fluid">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/roller.png" height="28" alt="Cines">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="usuario.html" class="nav-item nav-link active">USUARIOS</a>
+                            <a href="cines.html" class="nav-item nav-link">CINEMAS</a>
+                            <a href="#" class="nav-item nav-link">RESERVAS</a>
+                        </div>
+                        <div class="navbar-nav ms-auto">
+                            <a href="#" class="nav-item nav-link">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+
+    <!--Contenedor Cinema-->
+    <div class="container my-3">
+        <div class="row">
+
+            <!--Crear cinema-->
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                <h2>Crear usuario</h2>
+                <form>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="id" placeholder="Escribe ID" autofocus />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="email" placeholder="Escribe Email" autofocus />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="password" placeholder="Escribe la Contraseña" autofocus />
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="name" placeholder="Escribe Nombre" autofocus />
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="age" placeholder="Escribe Edad" autofocus />
+                    </div>
+                <!--    <div class="mb-3">
+                        <textarea class="form-control" id="descripcion" placeholder="Descripción" rows="3"></textarea>
+                    </div> 
+                -->    
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success" onclick="guardarInformacionCinema()">Guardar</button>
+                        <button class="btn btn-secondary" onclick="editarInformacionCinema()">Actualizar</button>
+                    </div>                 
+                </form>
+            </div>
+
+            <!--Listar cinema-->
+            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 py-4 bg-white">
+                <h2>Listado de Usuarios</h2>
+                <div class="d-grid gap-2">
+                    <button onclick="traerInformacionCinema()" class="btn btn-primary" >Consultar Usuario</button>
+
+                    <div id="resultado"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+
+    </body>
+</html>
